@@ -8,7 +8,7 @@ export default NextAuth({
       clientSecret: process.env.GITHUB_CLIENT_SECRET,
     }),
   ],
-  secret: process.env.NEXTAUTH_SECRET,
+  secret: process.env.NEXT_AUTH_SECRET,
   callbacks: {
     async signIn({ user, account, profile, email, credentials }) {
       const allowedUsers = process.env.ALLOWED_USERS.split(',');
